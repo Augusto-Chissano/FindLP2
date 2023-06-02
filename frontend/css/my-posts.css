@@ -1,0 +1,21 @@
+
+#my-posts {
+    background-color: #fff;
+    border: none;
+}
+
+#eliminar {
+    background-color: tomato;
+    width: 100px;
+}
+
+#encontrado {
+    background-color: #2ecc71;
+    width: 100px;
+}
+
+.post-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}

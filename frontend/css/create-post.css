@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    background-color: transparent;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.logo {
+    font-size: 1.3rem;
+}
+
+.profile-status img {
+    cursor: pointer;
+    height: 30px;
+    margin-right: 0.6rem;
+}
+
+.main-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+/*
+*
+*
+*
+*/
+
+aside {
+    padding: 8px;
+    margin-top: 10vh;
+    overflow-y: scroll;
+    height: 90vh;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+    margin-top: 0.6rem;
+}
+
+.perfil img {
+    height: 35px;
+}
+
+.picture-input {
+    display: none;
+}
+
+.picture {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+.picture:hover {
+    transition: .4s;
+    color: #999;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+img {
+    max-width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    outline-color: rgba(66, 133, 244, 0.4);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    box-shadow: 0px 2px 4px rgba(66, 133, 244, 0.4);
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+    box-shadow: 0px 2px 4px rgba(66, 133, 244, 0.4);
+}
+
+button {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    cursor: pointer;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+/*
+*
+*
+*
+*/
+
+main {
+    height: 100vh;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview {
+    background-color: #fff;
+    height: 83%;
+    margin-top: 16%;
+    margin: auto;
+    width: 95%;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.post-details {
+    display: flex;
+    height: 90%;
+    width: 100%;
+    border: 1px solid #999;
+    border-radius: 7px;
+}
+
+.preview h4 {
+    padding: 10px 0;
+    font-weight: 550;
+    font-size: 15px;
+}
+
+.post-details .img {
+    width: 65%;
+    height: 100%;
+    background-color: #f2f2f2;
+    background-position: center;
+    background-size: cover;
+}
+
+.post-details .details {
+    width: 35%;
+}
+
+.post-details .img label {
+    height: 100%;
+}
+
+.post-details .img label:hover {
+    box-shadow: none;
+}
+
+.preview .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 10px;
+}
+
+#mensagem {
+    padding: 10px;
+}
+
+.post-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.post-info p {
+    font-size: 14px;
+}
+
+.preview-author {
+    border-top: 1px solid #999;
+    margin-top: 1rem;
+}
+
+.preview-author span {
+    font-size: 13px;
+}
+
+.preview-autho img {
+    height: 30px;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    width: 300px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content p {
+    margin-bottom: 1rem;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.modal-content button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+}
+
+.hide {
+    display: none;
+}
+
+
+
+@media (max-width: 300px) {
+    .modal-content {
+        width: 200px;
+    }
+
+    .modal-content button {
+        width: 150px;
+    }
+}
+
+.success {
+    font-size: 29px;
+    color: #2ecc71;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="js/login.js" defer></script>
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="card">
+        <h2>Login</h2>
+        <form>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+            <a href="#" id="forgot-password">Esqueceu a Senha?</a>
+
+            <button type="submit" class="login-btn">Entrar</button>
+
+            <p>ou</p>
+
+            <button type="button" style="display: none;" class="google-btn">
+                <img id="google-icon" src="icons/google.png"> Entrar com Google
+            </button>
+
+            <button class="google-login-button">
+                <span class="google-login-button-icon"></span>
+                <span class="google-login-button-text"></span>Entrar com Google</span>
+            </button>
+
+            <p>Nao tem uma conta? <a href="signup.html">Inscrever-se</a></p>
+        </form>
+    </div>
+</body>
+
+</html>

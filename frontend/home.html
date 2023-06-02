@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <script src="js/home.js" defer></script>
+    <link rel="stylesheet" href="css/home.css">
+    <title>FindLP</title>
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <h2>FindLP</h2>
+            </div>
+            <div class="search-container">
+                <input id="searchInput" type="text" placeholder="Pesquisar">
+                <button>
+                    <i class="fas fa-search"></i>
+                    <span>Pesquisar</span>
+                </button>
+            </div>
+            <div class="profile-status">
+                <img alt src="./icons/definicoes.png">
+                <img alt class="profile-photos" src="img/model.jpg">
+            </div>
+        </div>
+    </nav>
+    <!--Main Section-->
+    <main>
+        <div class="wrapper">
+            <div class="side-bar">
+                <div class="profile">
+                    <img alt="icone" src="img/model.jpg">
+                    <h2 id="profile-name">Fulano Beltrano</h2>
+                </div>
+                <button class="publicar" id="new-task">+ Nova publicação</button>
+                <ul>
+                    <li>
+                        <a href="#" id="home">
+                            <span class="icon"><i class="fas fa-home"></i></span>
+                            <span class="item">Principal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./pendenttask.html">
+                            <span class="icon"><i class="far fa-bell"></i></span>
+                            <span class="item">Notificações</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./donetasks.html">
+                            <span class="icon"><i class="fas fa-envelope"></i></span>
+                            <span class="item">Mensagens</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./my-posts.html">
+                            <span class="icon"><i class="fas fa-newspaper"></i></span>
+                            <span class="item">Suas Publicações</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-cog"></i></span>
+                            <span class="item">Configurações</span>
+                        </a>
+                    </li>
+                    <li id="logout">
+                        <a href="./index.html" id="logout-a">
+                            <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                            <span class="item">Sair</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="post-container">
+                <div class="post-card">
+                    <div class="author">
+                        <img src="img/model.jpg" alt="Imagem do autor">
+                        <span class="author-name">Augusto Chissano</span>
+                    </div>
+                    <div class="post-info">
+                        <span class="post-date">02/06/2023</span>
+                        <p class="post-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis hic assumenda veniam, reiciendis, dolores quas, sapiente aspernatur voluptas dolorem eligendi qui molestiae eum deleniti perferendis a! Iusto repudiandae nam suscipit.</p>
+                        <img src="img/model.jpg" alt="Imagem da publicação">
+                        <div class="post-actions">
+                            <button title="like" class="like-button">
+                                <i class="fas fa-thumbs-up"></i>
+                            </button>
+                            <button title="share" class="share-button">
+                                <i class="fas fa-share"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

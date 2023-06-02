@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <script src="js/create-post.js" defer></script>
+    <link rel="stylesheet" href="css/create-post.css">
+    <title>Crie nova Publicação</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <h2>FindLP</h2>
+            </div>
+            <div class="profile-status">
+                <img src="./icons/messenger.png" alt="">
+                <img src="./icons/definicoes.png" alt="">
+                <img class="profile-photos" src="./icons/utilizador.png" alt="">
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+
+        <aside>
+
+            <div class="perfil">
+                <img class="profile-photos" src="./icons/utilizador.png" alt="profile">
+                <span id="profile-name">Fulano Beltrano Ciclano</span>
+            </div>
+
+            <form enctype="multipart/form-data">
+                <label class="picture">
+                    <input type="file" accept="image/*" id="form-image" class="picture-input">
+                    <span class="picture-image">Selecione uma imagem</span>
+                </label>
+                <input type="text" placeholder="Nome" id="form-name">
+                <input type="number" placeholder="Idade" id="form-age">
+                <select title="gender" name="genero" id="genero">
+                    <option selected disabled>Gênero</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Masculino">Masculino</option>
+                </select>
+                <input title="date" type="date" name="" id="form-date">
+                <input type="text" name="" id="form-location" placeholder="Localização ">
+                <textarea name="" id="form-description" cols="30" rows="10" placeholder="Adicione uma descrição "></textarea>
+                <button type="button" id="btn-post">Publicar</button>
+            </form>
+
+        </aside>
+
+        <main>
+
+            <div class="preview">
+                <h4>Preview</h4>
+                <div class="post-details">
+                    <div class="img" id="preview-img"></div>
+                    <div class="details">
+                        <div class="post-info">
+                            <div class="preview-name">
+                                <h4>Nome</h4>
+                                <p id="preview-name"></p>
+                            </div>
+                            <div class="preview-description">
+                                <h4>Descrição</h4>
+                                <p id="preview-description">A descrição irá aparecer aqui</p>
+                            </div>
+                            <div class="preview-author">
+                              <h4>Informações do autor</h4> 
+                              <div class="perfil">
+                                <img class="profile-photos" src="./icons/utilizador.png" alt="">
+                                <span id="post-preview-name">Fulano Beltrano Ciclano</span>
+                            </div> 
+                            </div>
+                        </div>
+                        <button id="mensagem">Mensagem</button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <div class="modal-content hide" id="modalContent">
+        <p>Publicação realizada com sucesso!</p>
+        <i class="fas fa-check-circle success"></i>
+        <button id="okButton">OK</button>
+    </div> 
+
+</body>
+
+</html>
