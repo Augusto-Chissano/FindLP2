@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="css/edit-profile.css">
+    <script src="js/edit-profile.js" defer></script>
+    <title>SIGN UP</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form">
+            <form id="form" enctype="multipart/form-data">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Editar Conta</h1>
+                    </div>
+                    <div class="login-botao">
+                        <button><a href="./home.html">Sair</a></button>
+                    </div>
+                </div>
+                <div class="profile-picture">
+                    <label class="picture">
+                        <input type="file" accept="image/*" id="form-image" class="picture-input">
+                        <span class="picture-image">Selecione uma imagem</span>
+                    </label>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="firstname">Primeiro Nome</label>
+                        <input id="firstname" type="text" name="firstname" placeholder="Insira o primeiro nome"
+                            required>
+                    </div>
+                    <div class="input-box">
+                        <label for="lastname">Apelido</label>
+                        <input id="lasttname" type="text" name="lastname" placeholder="Insira o seu Apelido" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" placeholder="Insira o seu e-mail" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="number">Telefone</label>
+                        <input id="number" type="text" name="number" placeholder="(+258) xxxxxxxxx" required>
+                    </div>
+                </div>
+                <div class="continue-botton">
+                    <button id="criar-conta">Editar Perfil</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-content hide" id="modalContent">
+        <p>Dados actualizados com sucesso!</p>
+        <i class="fas fa-check-circle success"></i>
+        <button id="okButton">OK</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <script src="js/post.js" defer></script>
+    <link rel="stylesheet" href="css/post.css">
+    <title>FindLP</title>
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <h2>FindLP</h2>
+            </div>
+            <div class="profile-status">
+                <img alt src="./icons/definicoes.png">
+                <img id="nav-profile-img" alt class="profile-photos" src="icons/utilizador.png">
+            </div>
+        </div>
+    </nav>
+    <!--Main Section-->
+    <main>
+        <div class="wrapper">
+            <div class="side-bar">
+                <div class="profile">
+                    <img id="profile-log-picture" alt="icone" src="./icons/utilizador.png">
+                    <h2 id="profile-name">Fulano Beltrano</h2>
+                </div>
+                <button class="publicar" id="new-task">+ Nova publicação</button>
+                <ul>
+                    <li>
+                        <a href="./home.html" id="home">
+                            <span class="icon"><i class="fas fa-home"></i></span>
+                            <span class="item">Principal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="far fa-bell"></i></span>
+                            <span class="item">Notificações</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-envelope"></i></span>
+                            <span class="item">Mensagens</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./my-posts.html">
+                            <span class="icon"><i class="fas fa-newspaper"></i></span>
+                            <span class="item">Suas Publicações</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./edit-profile.html">
+                            <span class="icon"><i class="fas fa-cog"></i></span>
+                            <span class="item">Editar Perfil</span>
+                        </a>
+                    </li>
+                    <li id="logout">
+                        <a href="./index.html" id="logout-a">
+                            <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                            <span class="item">Sair</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="post-container">
+                <div class="preview">
+                    <div class="post-details">
+                        <img class="img" id="post-image" src="img/model.jpg" alt="">
+                        <div class="details">
+                            <div class="post-info">
+                                <div class="preview-name">
+                                    <h4>Nome</h4>
+                                    <p id="post-name"></p>
+                                </div>
+                                <div class="preview-description">
+                                    <h4>Descrição</h4>
+                                    <p id="post-description">A descrição irá aparecer aqui</p>
+                                </div>
+                                <div class="preview-author">
+                                    <h4>Informações do autor</h4>
+                                    <div class="perfil">
+                                        <img class="profile-photos" id="post-author-image" src="./icons/utilizador.png"
+                                            alt="">
+                                        <span id="post-author-name">Fulano Beltrano Ciclano</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="mensagem">
+                                <i class="fab fa-whatsapp"></i>
+                                Enviar Mensagem
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

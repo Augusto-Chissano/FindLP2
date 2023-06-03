@@ -2,8 +2,23 @@ require('dotenv').config()
 const router = require("express").Router()
 const User = require("../models/User")
 const jwt = require('jsonwebtoken')
+const fs = require('fs')
+const multer = require('multer')
+const path = require('path')
+const withAuth = require('../middlewares/auth')
 const secret = process.env.SECRET_KEY
 
+//Definindo como e onde serao armazenados os arquivos que vierem na requisicao
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, './src/uploads')
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+    }
+})
+
+const upload = multer({ storage: storage })
 
 router.post("/users/signup", async (req, res) => {
 
@@ -32,6 +47,7 @@ router.post("/users/signup", async (req, res) => {
 router.post('/users/login', async (req, res) => {
     const { email, password } = req.body
 
+    console.log(email)
     try {
 
         if (!email || !password) {
@@ -45,7 +61,7 @@ router.post('/users/login', async (req, res) => {
         } else {
             user.isCorrectPassword(password, function (err, same) {
                 if (!same) {
-                    res.status(401).json({ error: 'Incorrect password or email' })
+                    res.status(401).json({ error: 'Incorrect password or email, from server' })
                 } else {
                     const token = jwt.sign({ email }, secret, { expiresIn: '10d' })
                     res.json({ user: user, token: token })
@@ -79,11 +95,11 @@ router.get("/user", async (req, res) => {
     }
 })
 
-router.put("/user/:username", async (req, res) => {
+router.delete("/user/:userId", async (req, res) => {
     try {
 
-        let username = req.params.username;
-        let user = await User.findOne({ username: username })
+
+        let user = await User.findOne({ _id: userId })
 
         user.username = req.body.username
         user.password = req.body.password
@@ -98,22 +114,22 @@ router.put("/user/:username", async (req, res) => {
 })
 
 
-router.delete("/user/:username", async (req, res) => {
+router.put("/user/:userId", withAuth, upload.single('image'), async (req, res) => {
     try {
+        
+        const image = req.file.filename
+        const _id = req.params.userId
+        const { firstName, lastName, email, phoneNumber } = req.body
 
-        const username = req.params.username
-        const user = await User.findOne({ username: username })
+        const user = await User.findByIdAndUpdate(_id, { firstName, lastName, email, phoneNumber, image }, { new: true })
 
-        user.status = false
-
-        await user.updateOne(user)
-        await user.save()
         res.status(200).json(user)
-
     } catch (err) {
-        return res.status(400).send({ error: 'Não foi possível eliminar o user' })
+        console.error(err)
+        return res.status(400).json({ error: "Não foi possível atualizar o usuário" })
     }
-});
+})
+
 
 
 module.exports = router

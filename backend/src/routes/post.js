@@ -42,7 +42,8 @@ router.get('/posts', withAuth, async (req, res) => {
 
     try {
 
-        let posts = await Post.find()
+        let posts = await Post.find().populate('author')
+        
         return res.status(200).json(posts)
 
     } catch (error) {

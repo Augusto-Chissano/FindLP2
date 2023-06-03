@@ -4,6 +4,11 @@ const user = JSON.parse(localStorage.getItem('user'))
 const profileName = document.getElementById('profile-name')
 const publicar = document.querySelector(".publicar")
 
+if (user.image) {
+    document.getElementById('profile-log-picture').src = `http://localhost:3333/uploads/${user.image}`
+    document.getElementById('nav-profile-img').src = `http://localhost:3333/uploads/${user.image}`
+  }
+
 profileName.textContent = `${user.firstName} ${user.lastName}`
 
 publicar.addEventListener("click", () => {
@@ -32,7 +37,7 @@ function renderPosts(posts) {
 
     container.innerHTML = ''
     //const myPosts = posts.filter((post) => post.author == user._id)
-    const userPost = posts.filter((post) => (post.author === user._id) && (post.deleted === false) && (post.found === false))
+    const userPost = posts.filter((post) => (post.author._id === user._id) && (post.deleted === false) && (post.found === false))
 
     userPost.forEach(post => {
         const card = document.createElement('div')
@@ -40,7 +45,7 @@ function renderPosts(posts) {
 
         card.innerHTML = `
         <div class="author">
-          <img src="img/model.jpg" alt="Imagem do autor">
+          <img src="${baseURL}/uploads/${post.author.image}" alt="Imagem do autor">
           <span class="author-name">${post.authorName}</span>
         </div>
         <div class="post-info">

@@ -261,12 +261,6 @@ main {
     width: 200px;
 }
 
-.hide {
-    display: none;
-}
-
-
-
 @media (max-width: 300px) {
     .modal-content {
         width: 200px;
@@ -280,4 +274,8 @@ main {
 .success {
     font-size: 29px;
     color: #2ecc71;
+}
+
+.hide {
+    display: none;
 }

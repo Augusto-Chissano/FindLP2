@@ -3,6 +3,8 @@ const emailInput = document.querySelector("#email")
 const passwordInput = document.querySelector("#password")
 const btnLogin = document.querySelector(".login-btn")
 
+console.log(JSON.parse(localStorage.getItem('user')))
+
 const login = async (email, password) => {
 
     try {
@@ -17,8 +19,8 @@ const login = async (email, password) => {
 
         if (response.ok) {
             const data = await response.json();
-            const { user, token } = data
-            return { user, token }
+            //const { user, token } = data
+            return data
         } else {
             const data = await response.json();
             return alert(data.error)

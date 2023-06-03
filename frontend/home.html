@@ -27,7 +27,7 @@
             </div>
             <div class="profile-status">
                 <img alt src="./icons/definicoes.png">
-                <img alt class="profile-photos" src="img/model.jpg">
+                <img id="nav-profile-img" alt class="profile-photos" src="icons/utilizador.png">
             </div>
         </div>
     </nav>
@@ -36,7 +36,7 @@
         <div class="wrapper">
             <div class="side-bar">
                 <div class="profile">
-                    <img alt="icone" src="img/model.jpg">
+                    <img id="profile-log-picture" alt="icone" src="./icons/utilizador.png">
                     <h2 id="profile-name">Fulano Beltrano</h2>
                 </div>
                 <button class="publicar" id="new-task">+ Nova publicação</button>
@@ -66,9 +66,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="./edit-profile.html">
                             <span class="icon"><i class="fas fa-cog"></i></span>
-                            <span class="item">Configurações</span>
+                            <span class="item">Editar Perfil</span>
                         </a>
                     </li>
                     <li id="logout">
@@ -87,7 +87,10 @@
                     </div>
                     <div class="post-info">
                         <span class="post-date">02/06/2023</span>
-                        <p class="post-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis hic assumenda veniam, reiciendis, dolores quas, sapiente aspernatur voluptas dolorem eligendi qui molestiae eum deleniti perferendis a! Iusto repudiandae nam suscipit.</p>
+                        <p class="post-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Perspiciatis hic assumenda veniam, reiciendis, dolores quas, sapiente aspernatur voluptas
+                            dolorem eligendi qui molestiae eum deleniti perferendis a! Iusto repudiandae nam suscipit.
+                        </p>
                         <img src="img/model.jpg" alt="Imagem da publicação">
                         <div class="post-actions">
                             <button title="like" class="like-button">
@@ -103,6 +106,25 @@
         </div>
 
     </main>
+
+    <div class="share-card hide">
+        <h3 class="share-title">Enviar esta publicação</h3>
+        <img src="./img/model.jpg" alt="Imagem da publicação" class="share-image">
+        <div class="share-buttons">
+            <button title="share" class="share-button whatsapp-button" style="background-color: #25D366;">
+                <i class="fab fa-whatsapp"></i>
+            </button>
+            <button title="share" class="share-button facebook-button" style="background-color: #1877F2;">
+                <i class="fab fa-facebook"></i>
+            </button>
+            <button title="share" class="share-button copy-link-button" style="background-color: #333;">
+                <i class="far fa-copy"></i>
+            </button>
+            <button title="share" class="share-button close-button" style="background-color: #333;">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
 
 </body>
 

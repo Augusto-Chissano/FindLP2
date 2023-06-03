@@ -1,0 +1,30 @@
+.profile-picture {
+    display: flex;
+    justify-content: center;
+}
+
+.picture-input {
+    display: none;
+}
+
+.picture-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    text-align: center;
+}
+
+.picture {
+    width: 50%;
+    aspect-ratio: 16/9;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    font-family: sans-serif;
+}
